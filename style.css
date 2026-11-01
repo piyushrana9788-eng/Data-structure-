@@ -1,0 +1,53 @@
+/* Black and white theme - HTML + CSS only, no JavaScript */
+:root{--bg:#fff;--fg:#000;--muted:#555;--line:#000;--soft:#f3f3f3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding:24px 14px 60px}
+header{border:2px solid var(--line);border-radius:16px;padding:26px 18px;margin-bottom:16px;text-align:center}
+h1{margin:0;font-weight:800;font-size:clamp(1.7rem,7vw,2.8rem);letter-spacing:-.02em;line-height:1.15}
+.radio{position:absolute;opacity:0;pointer-events:none}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tabs label{cursor:pointer;border:1.5px solid var(--line);border-radius:12px;padding:9px 16px;font-size:.9rem;background:var(--bg);color:var(--fg)}
+.tabs label:hover{background:var(--soft)}
+.panel{display:none}
+.count{margin:0 4px 10px;color:var(--muted);font-size:.85rem}
+.card{border:1.5px solid var(--line);border-radius:14px;margin-bottom:10px;background:var(--bg);overflow:hidden}
+.card>summary{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;cursor:pointer;list-style:none;font-size:.95rem}
+.card>summary::-webkit-details-marker{display:none}
+.card>summary::after{content:"\203A";margin-left:auto;font-size:1.3rem;line-height:1;transition:transform .2s}
+.card[open]>summary::after{transform:rotate(90deg)}
+.num{flex:0 0 auto;min-width:34px;height:34px;display:grid;place-items:center;border:1.5px solid var(--line);border-radius:10px;font-size:.78rem;font-weight:700}
+.card[open]>summary .num{background:var(--fg);color:var(--bg)}
+.body{padding:0 16px 16px}
+.label{margin:6px 0 8px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+pre{margin:0;padding:14px;background:var(--soft);border:1px solid var(--line);border-radius:12px;overflow-x:auto;font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.78rem;line-height:1.6;max-width:100%;tab-size:4;color:var(--fg)}
+.kw{font-weight:700}.st,.nu{color:#444}.cm,.pp{color:var(--muted);font-style:italic}
+.outbox{margin-top:14px}
+.outbox>summary{display:inline-block;cursor:pointer;list-style:none;border:1.5px solid var(--line);border-radius:10px;padding:8px 14px;font-size:.85rem;font-weight:600;background:var(--fg);color:var(--bg)}
+.outbox>summary::-webkit-details-marker{display:none}
+.outbox .hide,.outbox[open] .show{display:none}
+.outbox[open] .hide{display:inline}
+.outbox pre{margin-top:12px;border-left:4px solid var(--line);white-space:pre-wrap;word-break:break-word;background:var(--bg)}
+footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:22px}
+#t0:checked ~ .tabs label[for=t0]{background:var(--fg);color:var(--bg);font-weight:600}
+#t0:checked ~ main #p0{display:block}
+#t0:focus-visible ~ .tabs label[for=t0]{outline:3px solid var(--muted);outline-offset:2px}
+#t1:checked ~ .tabs label[for=t1]{background:var(--fg);color:var(--bg);font-weight:600}
+#t1:checked ~ main #p1{display:block}
+#t1:focus-visible ~ .tabs label[for=t1]{outline:3px solid var(--muted);outline-offset:2px}
+#t2:checked ~ .tabs label[for=t2]{background:var(--fg);color:var(--bg);font-weight:600}
+#t2:checked ~ main #p2{display:block}
+#t2:focus-visible ~ .tabs label[for=t2]{outline:3px solid var(--muted);outline-offset:2px}
+#t3:checked ~ .tabs label[for=t3]{background:var(--fg);color:var(--bg);font-weight:600}
+#t3:checked ~ main #p3{display:block}
+#t3:focus-visible ~ .tabs label[for=t3]{outline:3px solid var(--muted);outline-offset:2px}
+#t4:checked ~ .tabs label[for=t4]{background:var(--fg);color:var(--bg);font-weight:600}
+#t4:checked ~ main #p4{display:block}
+#t4:focus-visible ~ .tabs label[for=t4]{outline:3px solid var(--muted);outline-offset:2px}
+#t5:checked ~ .tabs label[for=t5]{background:var(--fg);color:var(--bg);font-weight:600}
+#t5:checked ~ main #p5{display:block}
+#t5:focus-visible ~ .tabs label[for=t5]{outline:3px solid var(--muted);outline-offset:2px}
+#t6:checked ~ .tabs label[for=t6]{background:var(--fg);color:var(--bg);font-weight:600}
+#t6:checked ~ main #p6{display:block}
+#t6:focus-visible ~ .tabs label[for=t6]{outline:3px solid var(--muted);outline-offset:2px}
